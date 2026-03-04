@@ -1,9 +1,12 @@
 package nintendo.model;
 
+import java.util.ArrayList;
+
 public class Client 
 {
 	private String nom;
 	private String prenom;
+	private ArrayList<String> listeAchats = new ArrayList();
 	
 	public Client(String nom, String prenom) {
 		super();
@@ -21,6 +24,16 @@ public class Client
 	}
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
+	}
+	public ArrayList<String> getListeAchats() {
+		return listeAchats;
+	}
+	public void setListeAchats(ArrayList<String> listeAchats) {
+		this.listeAchats = listeAchats;
+	}
+	@Override
+	public String toString() {
+		return "Client [nom=" + nom + ", prenom=" + prenom + ", listeAchats=" + listeAchats + "]";
 	}
 	
 }
